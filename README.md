@@ -1,8 +1,13 @@
-# Verificador-Puerto-443
 # Instrucciones para el uso del Analizador de Puertos 443
 
 ## Descripción General
-El Analizador de Puertos 443 es un programa que verifica la disponibilidad del puerto 443 en una lista de dominios proporcionados en un archivo CSV.
+El Analizador de Puertos 443 es una herramienta desarrollada en Python que verifica la accesibilidad del puerto 443 en una lista de dominios provistos en un archivo CSV. Este programa utiliza librerías estándar de Python y herramientas de línea de comandos como curl y nmap para obtener información sobre el estado del puerto en los dominios especificados.
+
+El objetivo principal de esta herramienta es automatizar la verificación del estado del puerto 443 en múltiples dominios, lo que resulta crucial para sitios web y servicios que requieren conexiones seguras mediante HTTPS. Este análisis es fundamental para identificar posibles problemas de seguridad o configuración en los servidores web.
+
+Al ejecutar el programa, se lee el archivo CSV de entrada que contiene una lista de dominios a verificar. Para cada dominio, se realiza una serie de comprobaciones utilizando curl y nmap, obteniendo información sobre el estado del puerto 443. Los resultados de estas verificaciones se registran en un nuevo archivo CSV de salida para un seguimiento y análisis más detallado.
+
+El programa también cuenta con la capacidad de notificar por correo electrónico a los responsables de los dominios cuyo puerto 443 se encuentre cerrado. 
 
 ## Estructura del Archivo de Entrada
 - Nombre del archivo CSV de entrada: `dominios.csv`
@@ -15,22 +20,42 @@ El Analizador de Puertos 443 es un programa que verifica la disponibilidad del p
   - Puerto_443_abierto: Estado del puerto 443 (SI/NO/ERROR/...)
   - Otros_puertos_abiertos: Listado de otros puertos abiertos o estado del host.
   - Correo Enviado: Estado del envío del correo (si aplica).
-
+    
+## Configuración por Defecto
+- **Archivo CSV de Entrada:** `dominios.csv`
+- **Columna a Extraer dominios del Archivo CSV:** Columna E (0-indexed)
+- **Fila para Iniciar la Extracción:** Fila 2 (La primera es el titulo).
+- **Archivo de Resultados:** `resultados_puertos.csv`
+- **Servidor SMTP:** `smtp.gmail.com`
+- **Puerto SMTP:** 587
+- **Dirección de Correo Electrónico del Usuario SMTP:** (Valor vacío)
+- **Contraseña del Usuario SMTP:** (Valor vacío)
+  
 ## Modificaciones Necesarias
 Para adaptar el programa a archivos diferentes, considera actualizar las siguientes variables en el código:
-- `archivo_csv`: Nombre o ruta del archivo CSV de entrada. (Linea de codigo 82).
-- `columna_a_extraer`: Índice de la columna que contiene los dominios. (Linea de codigo 83).
-- `fila_a_iniciar`: Índice de la fila que contiene el primer dominio(la primer fila es el titulo). (Linea de codigo 84).
+### Variables a Modificar
+- `archivo_csv`: Nombre del archivo CSV de entrada. (Linea de codigo 82).
+- `columna_a_extraer`: Índice de la columna que contiene los dominios en el archivo CSV. (Linea de codigo 83).
+- `fila_a_iniciar`: Número de fila para comenzar a extraer información. (Linea de codigo 84).
 - `archivo_resultado`: Nombre o ruta del archivo CSV de salida. (Linea de codigo 88).
-
+- `servidor_smtp`: Nombre del servidor SMTP utilizado para enviar correos.  (Linea de codigo 111).
+- `puerto_smtp`: Puerto del servidor SMTP. (Linea de codigo 112).
+- `usuario_smtp`: Nombre de usuario del correo electrónico. (Linea de codigo 113).
+- `contraseña_smtp`: Contraseña del correo electrónico. (Linea de codigo 114).
+- 
+- **Función `obtener_correo_para_domain`**:
+- `columna_dominio`: Obtiene el dominio correspondiente en la columna E. Modificar de ser necesario. (Linea de codigo 97).
+- `columna_correo`: Retorna el correo correspondiente al dominio en la columna A. Modificar de ser necesario. (Linea de codigo 98).
+  
+- **Función `enviar_correo`**:
+  - Modificar `asunto` y `mensaje` si se cambian los datos del mensaje a enviar. (Lineas 157 y 158 de codigo).
+  - Actualizar la información del servidor SMTP si hay cambios en la configuración.
+- 
 ## Procedimiento de Ejecución
 1. Asegúrate de tener el archivo de entrada con el nombre `dominios.csv` si no modificaste la configuracion original.
 2. Ejecuta el código del programa python con el siguiente comando : sudo python3 port443.py 
 3. Verifica los resultados en el archivo `resultados_puertos.csv`.
 
-## Referencias Técnicas
-- Documentación adicional sobre el uso de Python con archivos CSV.
-- Referencias a herramientas como `smtplib` o `subprocess` si se requiere.
 
 ---
 Autor: Ezequiel Matias Landaeta
