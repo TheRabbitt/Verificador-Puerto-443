@@ -58,5 +58,5 @@ Para adaptar el programa a archivos diferentes, considera actualizar las siguien
 
 
 ---
-Autor: Ezequiel Matias Landaeta
-Fecha de Creación: 6/12/2023
+-Autor: Ezequiel Matias Landaeta
+-Fecha de Creación: 6/12/2023
