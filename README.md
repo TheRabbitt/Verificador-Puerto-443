@@ -34,9 +34,9 @@ El programa también cuenta con la capacidad de notificar por correo electrónic
 ## Modificaciones Necesarias
 Para adaptar el programa a archivos diferentes, considera actualizar las siguientes variables en el código:
 ### Variables a Modificar
-  - `archivo_csv`: Nombre del archivo CSV de entrada. (Linea de codigo 15).
-  - `columna_a_extraer`: Índice de la columna que contiene los dominios en el archivo CSV. (Linea de codigo 16).
-  - `fila_a_iniciar`: Número de fila para comenzar a extraer información. (Linea de codigo 17).
+  - `archivo_csv`: Nombre del archivo CSV de entrada. (Linea de codigo 16).
+  - `columna_a_extraer`: Índice de la columna que contiene los dominios en el archivo CSV. (Linea de codigo 17).
+  - `fila_a_iniciar`: Número de fila para comenzar a extraer información. (Linea de codigo 18).
   - `archivo_resultado`: Nombre o ruta del archivo CSV de salida. (Linea de codigo 21).
   - `servidor_smtp`: Nombre del servidor SMTP utilizado para enviar correos.  (Linea de codigo 24).
   - `puerto_smtp`: Puerto del servidor SMTP. (Linea de codigo 25).
