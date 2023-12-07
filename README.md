@@ -18,10 +18,10 @@ El programa también cuenta con la capacidad de notificar por correo electrónic
   - Campos del archivo de salida:
   - Dominio: Nombre del dominio verificado.
   - Puerto_443_abierto: Estado del puerto 443 (SI/NO/SI-ERROR-NRO/SI-REDIRECCION).
-    -SI:Puerto 443 Abierto.
-    -NO:Puerto 443 Cerrado.
-    -SI-ERROR-NRO:Puerto 443 Abierto pero el host devolvio algun error asociado.
-    -SI-REDIRECCION:Puerto 443 Abierto pero hubo una redirreccion de http a https.
+    - SI:Puerto 443 Abierto.
+    - NO:Puerto 443 Cerrado.
+    - SI-ERROR-NRO:Puerto 443 Abierto pero el host devolvio algun error asociado.
+    - SI-REDIRECCION:Puerto 443 Abierto pero hubo una redirreccion de http a https.
   - Otros_puertos_abiertos: Listado de otros puertos abiertos o estado del host.
   - Correo Enviado: Estado del envío del correo (si aplica).
     
@@ -56,9 +56,9 @@ Para adaptar el programa a archivos diferentes, considera actualizar las siguien
   - Actualizar la información del servidor SMTP si hay cambios en la configuración.
  
 ## Procedimiento de Ejecución
-1. Asegúrate de tener el archivo de entrada con el nombre `dominios.csv` si no modificaste la configuracion original.
+1. Asegúrate de tener el archivo de entrada con el nombre `dominios.csv` si no se modifico la configuracion original.
 2. Asegurarse que el archivo de entrada `dominios.csv` tenga los permisos de ejecucion necesarios. (sudo chmod +x dominios.csv).
-3. Ejecuta el código del programa python con el siguiente comando : sudo python3 port443.py 
+3. Ejecuta el script de python con el siguiente comando : sudo python3 port443.py 
 4. Verifica los resultados en el archivo `resultados_puertos.csv`.
 
 
