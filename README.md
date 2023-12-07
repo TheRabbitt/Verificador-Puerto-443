@@ -34,21 +34,21 @@ El programa también cuenta con la capacidad de notificar por correo electrónic
 ## Modificaciones Necesarias
 Para adaptar el programa a archivos diferentes, considera actualizar las siguientes variables en el código:
 ### Variables a Modificar
-  - `archivo_csv`: Nombre del archivo CSV de entrada. (Linea de codigo 82).
-  - `columna_a_extraer`: Índice de la columna que contiene los dominios en el archivo CSV. (Linea de codigo 83).
-  - `fila_a_iniciar`: Número de fila para comenzar a extraer información. (Linea de codigo 84).
-  - `archivo_resultado`: Nombre o ruta del archivo CSV de salida. (Linea de codigo 88).
-  - `servidor_smtp`: Nombre del servidor SMTP utilizado para enviar correos.  (Linea de codigo 111).
-  - `puerto_smtp`: Puerto del servidor SMTP. (Linea de codigo 112).
-  - `usuario_smtp`: Nombre de usuario del correo electrónico. (Linea de codigo 113).
-  - `contraseña_smtp`: Contraseña del correo electrónico. (Linea de codigo 114).
+  - `archivo_csv`: Nombre del archivo CSV de entrada. (Linea de codigo 15).
+  - `columna_a_extraer`: Índice de la columna que contiene los dominios en el archivo CSV. (Linea de codigo 16).
+  - `fila_a_iniciar`: Número de fila para comenzar a extraer información. (Linea de codigo 17).
+  - `archivo_resultado`: Nombre o ruta del archivo CSV de salida. (Linea de codigo 21).
+  - `servidor_smtp`: Nombre del servidor SMTP utilizado para enviar correos.  (Linea de codigo 24).
+  - `puerto_smtp`: Puerto del servidor SMTP. (Linea de codigo 25).
+  - `usuario_smtp`: Nombre de usuario del correo electrónico. (Linea de codigo 26).
+  - `contraseña_smtp`: Contraseña del correo electrónico. (Linea de codigo 27).
   
 - **Función `obtener_correo_para_domain`**:
-  - `columna_dominio`: Obtiene el dominio correspondiente en la columna E. Modificar de ser necesario. (Linea de codigo 97).
-  - `columna_correo`: Retorna el correo correspondiente al dominio en la columna A. Modificar de ser necesario. (Linea de codigo 98).
+  - `columna_dominio`: Obtiene el dominio correspondiente en la columna E. Modificar de ser necesario. (Linea de codigo 30).
+  - `columna_correo`: Retorna el correo correspondiente al dominio en la columna A. Modificar de ser necesario. (Linea de codigo 31).
   
 - **Función `enviar_correo`**:
-  - Modificar `asunto` y `mensaje` si se cambian los datos del mensaje a enviar. (Lineas 157 y 158 de codigo).
+  - Modificar `asunto` y `mensaje` si se cambian los datos del mensaje a enviar. (Lineas 34 y 35 de codigo).
   - Actualizar la información del servidor SMTP si hay cambios en la configuración.
  
 ## Procedimiento de Ejecución
