@@ -53,10 +53,11 @@ Para adaptar el programa a archivos diferentes, considera actualizar las siguien
 - 
 ## Procedimiento de Ejecución
 1. Asegúrate de tener el archivo de entrada con el nombre `dominios.csv` si no modificaste la configuracion original.
-2. Ejecuta el código del programa python con el siguiente comando : sudo python3 port443.py 
-3. Verifica los resultados en el archivo `resultados_puertos.csv`.
+2. Asegurarse que el archivo de entrada `dominios.csv` tenga los permisos de ejecucion necesarios. (sudo chmod +x dominios.csv).
+3. Ejecuta el código del programa python con el siguiente comando : sudo python3 port443.py 
+4. Verifica los resultados en el archivo `resultados_puertos.csv`.
 
 
 ---
 -Autor: Ezequiel Matias Landaeta
--Fecha de Creación: 6/12/2023
+-Fecha de Creación: 7/12/2023
