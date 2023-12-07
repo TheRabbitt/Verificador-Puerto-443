@@ -18,10 +18,10 @@ El programa también cuenta con la capacidad de notificar por correo electrónic
   - Campos del archivo de salida:
   - Dominio: Nombre del dominio verificado.
   - Puerto_443_abierto: Estado del puerto 443 (SI/NO/SI-ERROR-NRO/SI-REDIRECCION).
-    SI:Puerto 443 Abierto.
-    NO:Puerto 443 Cerrado.
-    SI-ERROR-NRO:Puerto 443 Abierto pero el host devolvio algun error asociado.
-    SI-REDIRECCION:Puerto 443 Abierto pero hubo una redirreccion de http a https.
+    --SI:Puerto 443 Abierto.
+    --NO:Puerto 443 Cerrado.
+    --SI-ERROR-NRO:Puerto 443 Abierto pero el host devolvio algun error asociado.
+    --SI-REDIRECCION:Puerto 443 Abierto pero hubo una redirreccion de http a https.
   - Otros_puertos_abiertos: Listado de otros puertos abiertos o estado del host.
   - Correo Enviado: Estado del envío del correo (si aplica).
     
